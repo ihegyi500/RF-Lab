@@ -6,14 +6,15 @@ using System.Windows.Forms;
 using System.Drawing.Printing;
 using Nyomtatas;
 
-namespace BCPS
+namespace RFLab
 {
-    public partial class BarcodePrinter : Form
+    public partial class RFLab : Form
     {
-        int A = 450, B, textboxcounter = 2;
+        int A = 450, textboxcounter = 2;
+        const int B = 25;
         List<string> lista = new List<string>();
 
-        public BarcodePrinter()
+        public RFLab()
         {
             InitializeComponent();
             //Nyomtatólista feltöltése
@@ -59,41 +60,27 @@ namespace BCPS
         private void NewBarcode_Click(object sender, EventArgs e)
         {
             if (textboxcounter / 2 > 5)
-                MessageBox.Show("Egyszerre maximum 1 oldalnyi címkét nyomtathatsz!", "Figyelmeztetés!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                newBarcode.Enabled = false;
             else
             {
-                B = 25;
-                AddNewBarcode(A, B + 20);
-                AddNewLabel(A + 25, B, "Username");
-                B = 70;
-                AddNewBarcode(A, B + 20);
-                AddNewLabel(A + 25, B, "Password");
+                AddNewLabel(A, B, "Username");
+                AddNewLabel(A, B + 45, "Password");
                 A += 150;
             }
         }
-
-        //Új szövegdoboz
-        public TextBox AddNewBarcode(int A, int B)
+        public void AddNewLabel(int A, int B, string text)
         {
             TextBox txt = new TextBox();
-            Controls.Add(txt);
-            txt.Top = B;
-            txt.Left = A;
-            textboxcounter++;
-            return txt;
-        }
-
-        //Új címke
-        public Label AddNewLabel(int A, int B, string text)
-        {
             Label lb = new Label();
-            Controls.Add(lb);
+            txt.Top = B + 20;
+            txt.Left = A;
             lb.Top = B;
-            lb.Left = A;
+            lb.Left = A + 25;
             lb.Text = text;
-            return lb;
+            Controls.Add(txt);
+            Controls.Add(lb);
+            textboxcounter++;
         }
-
         public void Stringbollista()
         {
             lista.Clear();

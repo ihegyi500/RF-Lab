@@ -97,14 +97,18 @@ namespace Nyomtatas
             format.Alignment = StringAlignment.Center;          //Szélesség
             format.LineAlignment = StringAlignment.Center;      //Magasság
             g.DrawString(UserLabel.Text, font, brush,rect,format);
+
             font = new Font("Arial", 14, FontStyle.Bold);
             format.LineAlignment = StringAlignment.Far;
             g.DrawString(UserName.ToUpper(), font, brush, rect, format);
+
             rect.Location = new Point(x, y + 110);
             g.DrawRectangle(myPen, rect);
+
             font = new Font("Free 3 of 9 Extended", 36);
             format.LineAlignment = StringAlignment.Center;
             g.DrawString(PasswordLabel.Text, font, brush, rect, format);
+
             font = new Font("Arial", 12, FontStyle.Bold);
             format.LineAlignment = StringAlignment.Far;
             g.DrawString(Password.ToUpper(), font, brush, rect, format);

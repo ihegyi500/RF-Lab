@@ -14,7 +14,7 @@
       <FileName>SQLClass.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BCPS.BarcodePrinter">
+  <Class Name="RFLab.BarcodePrinter">
     <Position X="4.75" Y="0.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>hAABYAAUACAAAABAIUCAAAmCAEAAACAAAAAAYAGAIAA=</HashCode>

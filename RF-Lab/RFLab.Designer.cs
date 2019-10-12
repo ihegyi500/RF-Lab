@@ -1,6 +1,6 @@
-﻿namespace BCPS
+﻿namespace RFLab
 {
-    partial class BarcodePrinter
+    partial class RFLab
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BarcodePrinter));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RFLab));
             this.printersLabel = new System.Windows.Forms.Label();
             this.PrintersList = new System.Windows.Forms.ComboBox();
             this.PrintAndSaveButton = new System.Windows.Forms.Button();
@@ -74,7 +74,7 @@
             this.TextBox_0.Location = new System.Drawing.Point(300, 45);
             this.TextBox_0.Name = "TextBox_0";
             this.TextBox_0.Size = new System.Drawing.Size(100, 20);
-            this.TextBox_0.TabIndex = 3;
+            this.TextBox_0.TabIndex = 6;
             // 
             // TextBox_1
             // 
@@ -82,12 +82,12 @@
             this.TextBox_1.Name = "TextBox_1";
             this.TextBox_1.PasswordChar = '*';
             this.TextBox_1.Size = new System.Drawing.Size(100, 20);
-            this.TextBox_1.TabIndex = 4;
+            this.TextBox_1.TabIndex = 7;
             // 
             // userLabel
             // 
             this.userLabel.AutoSize = true;
-            this.userLabel.Location = new System.Drawing.Point(320, 24);
+            this.userLabel.Location = new System.Drawing.Point(320, 25);
             this.userLabel.Name = "userLabel";
             this.userLabel.Size = new System.Drawing.Size(55, 13);
             this.userLabel.TabIndex = 5;
@@ -96,7 +96,7 @@
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Location = new System.Drawing.Point(320, 72);
+            this.passwordLabel.Location = new System.Drawing.Point(320, 70);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(53, 13);
             this.passwordLabel.TabIndex = 6;
@@ -107,7 +107,7 @@
             this.newBarcode.Location = new System.Drawing.Point(300, 131);
             this.newBarcode.Name = "newBarcode";
             this.newBarcode.Size = new System.Drawing.Size(100, 23);
-            this.newBarcode.TabIndex = 7;
+            this.newBarcode.TabIndex = 5;
             this.newBarcode.Text = "Add new Barcode";
             this.newBarcode.UseVisualStyleBackColor = true;
             this.newBarcode.Click += new System.EventHandler(this.NewBarcode_Click);
@@ -117,7 +117,7 @@
             this.PrintButton.Location = new System.Drawing.Point(123, 99);
             this.PrintButton.Name = "PrintButton";
             this.PrintButton.Size = new System.Drawing.Size(64, 23);
-            this.PrintButton.TabIndex = 8;
+            this.PrintButton.TabIndex = 3;
             this.PrintButton.Text = "Print";
             this.PrintButton.UseVisualStyleBackColor = true;
             this.PrintButton.Click += new System.EventHandler(this.PrintingButton_Click);
@@ -127,7 +127,7 @@
             this.SaveButton.Location = new System.Drawing.Point(197, 99);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(75, 23);
-            this.SaveButton.TabIndex = 10;
+            this.SaveButton.TabIndex = 4;
             this.SaveButton.Text = "Save";
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
@@ -138,12 +138,12 @@
             this.PrintPreviewLabel.Location = new System.Drawing.Point(30, 72);
             this.PrintPreviewLabel.Name = "PrintPreviewLabel";
             this.PrintPreviewLabel.Size = new System.Drawing.Size(78, 13);
-            this.PrintPreviewLabel.TabIndex = 11;
+            this.PrintPreviewLabel.TabIndex = 0;
             this.PrintPreviewLabel.TabStop = true;
             this.PrintPreviewLabel.Text = "Printer Preview";
             this.PrintPreviewLabel.Click += new System.EventHandler(this.PrintPreviewLabel_Click);
             // 
-            // BarcodePrinter
+            // RFLab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -163,7 +163,7 @@
             this.Controls.Add(this.printersLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "BarcodePrinter";
+            this.Name = "RFLab";
             this.Text = "BarCodePrinter";
             this.ResumeLayout(false);
             this.PerformLayout();
