@@ -164,7 +164,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RFLab";
-            this.Text = "BarCodePrinter";
+            this.Text = "RF-Lab";
             this.ResumeLayout(false);
             this.PerformLayout();
 
