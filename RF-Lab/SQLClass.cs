@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-using RFLab;
 using System.Data;
 
-namespace Nyomtatas
+namespace RFLab
 {
     class SQLClass
     {

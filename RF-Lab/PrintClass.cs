@@ -4,7 +4,7 @@ using System.Windows.Forms;
 using System.Drawing.Printing;
 using System.Drawing;
 
-namespace Nyomtatas
+namespace RFLab
 {
     class PrintClass
     {
