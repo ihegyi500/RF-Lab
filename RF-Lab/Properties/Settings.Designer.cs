@@ -25,28 +25,40 @@ namespace RFLab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("KUNSHUMS001")]
-        public string Server {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=KUNSHUMS001;Initial Catalog=Kunsziget_IS; Integrated Security=true")]
+        public string ConnectionString {
             get {
-                return ((string)(this["Server"]));
+                return ((string)(this["ConnectionString"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Kunsziget_IS")]
-        public string Database {
+        [global::System.Configuration.DefaultSettingValueAttribute("SELECT COUNT(RfgunSzériaSzám) FROM RFGUN WHERE Felhasználónév LIKE @user")]
+        public string Select {
             get {
-                return ((string)(this["Database"]));
+                return ((string)(this["Select"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("RFGUN")]
-        public string Table {
+        [global::System.Configuration.DefaultSettingValueAttribute("INSERT INTO RFGUN(Felhasználónév, Jelszó) VALUES(@user, @password)")]
+        public string InsertInto {
             get {
-                return ((string)(this["Table"]));
+                return ((string)(this["InsertInto"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("UPDATE RFGUN SET Jelszó = @password WHERE Felhasználónév = @user")]
+        public string Update {
+            get {
+                return ((string)(this["Update"]));
+            }
+            set {
+                this["Update"] = value;
             }
         }
     }

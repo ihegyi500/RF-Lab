@@ -41,7 +41,7 @@ namespace RFLab
                         try
                         {
                             int rowsAffected = AddNewLine(sqlConnection);
-                            MessageBox.Show("New record has created!" + Environment.NewLine + 
+                            MessageBox.Show("New record has created!\n" + 
                                             "Rows Affected: " + rowsAffected);
                         }
                         catch (DefaultException ex)
@@ -54,7 +54,7 @@ namespace RFLab
                         try
                         {
                             int rowsAffected = UpdateExistLine(sqlConnection);
-                            MessageBox.Show("Password has changed!" + Environment.NewLine + 
+                            MessageBox.Show("Password has changed!\n" +  
                                             "Rows Affected: " + rowsAffected);
                         }
                         catch (DefaultException ex)
@@ -72,9 +72,7 @@ namespace RFLab
         {
             try
             {
-                SqlConnection connect = new SqlConnection("Data Source=" + Properties.Settings.Default.Server + 
-                                                          ";Initial Catalog=" + Properties.Settings.Default.Database +
-                                                          "; Security=True");
+                SqlConnection connect = new SqlConnection(Properties.Settings.Default.ConnectionString);
                 return connect;
             }
             catch (Exception ex)
@@ -88,8 +86,7 @@ namespace RFLab
             int returnValue = -1;
             try
             {
-                SqlCommand userExists = new SqlCommand("SELECT COUNT(RfgunSzériaSzám) FROM " + Properties.Settings.Default.Server + 
-                                                       " WHERE Felhasználónév LIKE @user", sqlConnection);
+                SqlCommand userExists = new SqlCommand(Properties.Settings.Default.Select, sqlConnection);
                 userExists.Parameters.Add("@user", SqlDbType.NVarChar);
                 userExists.Parameters["@user"].Value = lista[i - 2];
                 returnValue = (int)userExists.ExecuteScalar();
@@ -106,8 +103,7 @@ namespace RFLab
             int returnValue = -1;
             try
             {
-                SqlCommand newLine = new SqlCommand("INSERT INTO" + Properties.Settings.Default.Table + 
-                                                    "(Felhasználónév, Jelszó) VALUES(@user, @password)", sqlConnection);
+                SqlCommand newLine = new SqlCommand(Properties.Settings.Default.InsertInto, sqlConnection);
                 newLine.Parameters.Add("@user", SqlDbType.NVarChar);
                 newLine.Parameters["@user"].Value = lista[i - 2];
                 newLine.Parameters.Add("@password", SqlDbType.Int);
@@ -126,8 +122,7 @@ namespace RFLab
             int returnValue = -1;
             try
             {
-                SqlCommand pwRefresh = new SqlCommand("UPDATE" + Properties.Settings.Default.Table + 
-                                                      "SET Jelszó = @password WHERE Felhasználónév = @user;", sqlConnection);
+                SqlCommand pwRefresh = new SqlCommand(Properties.Settings.Default.Update, sqlConnection);
                 pwRefresh.Parameters.Add("@user", SqlDbType.NVarChar);
                 pwRefresh.Parameters["@user"].Value = lista[i - 2];
                 pwRefresh.Parameters.Add("@password", SqlDbType.Int);

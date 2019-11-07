@@ -27,7 +27,7 @@ namespace RFLab
 
         private void PrintAndSaveButton_Click(object sender, EventArgs e)
         {
-            Stringbollista();
+            ListRefresh();
             PrintClass print = new PrintClass(lista, PrintersList, textboxcounter);
             print.Printing();
             SQLClass datab = new SQLClass(lista,textboxcounter);
@@ -36,21 +36,21 @@ namespace RFLab
 
         private void PrintingButton_Click(object sender, EventArgs e)
         {
-            Stringbollista();
+            ListRefresh();
             PrintClass print = new PrintClass(lista, PrintersList, textboxcounter);
             print.Printing();
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            Stringbollista();
+            ListRefresh();
             SQLClass datab = new SQLClass(lista, textboxcounter);
             datab.Sqlcon();
         }
 
         private void PrintPreviewLabel_Click(object sender, EventArgs e)
         {
-            Stringbollista();
+            ListRefresh();
             PrintClass print = new PrintClass(lista, PrintersList, textboxcounter);
             print.PrintPreviewLabel_Click(sender,e);
         }
@@ -80,7 +80,7 @@ namespace RFLab
             Controls.Add(lb);
             textboxcounter++;
         }
-        public void Stringbollista()
+        public void ListRefresh()
         {
             lista.Clear();
             lista = this.Controls.OfType<TextBox>()
