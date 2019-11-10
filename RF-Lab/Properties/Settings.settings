@@ -11,7 +11,7 @@
     <Setting Name="InsertInto" Type="System.String" Scope="Application">
       <Value Profile="(Default)">INSERT INTO RFGUN(Felhasználónév, Jelszó) VALUES(@user, @password)</Value>
     </Setting>
-    <Setting Name="Update" Type="System.String" Scope="User">
+    <Setting Name="Update" Type="System.String" Scope="Application">
       <Value Profile="(Default)">UPDATE RFGUN SET Jelszó = @password WHERE Felhasználónév = @user</Value>
     </Setting>
   </Settings>

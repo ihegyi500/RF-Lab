@@ -53,6 +53,7 @@
             // 
             // PrintersList
             // 
+            this.PrintersList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PrintersList.FormattingEnabled = true;
             this.PrintersList.Location = new System.Drawing.Point(32, 44);
             this.PrintersList.Name = "PrintersList";

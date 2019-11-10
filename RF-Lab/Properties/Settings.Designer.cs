@@ -50,15 +50,12 @@ namespace RFLab.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("UPDATE RFGUN SET Jelszó = @password WHERE Felhasználónév = @user")]
         public string Update {
             get {
                 return ((string)(this["Update"]));
-            }
-            set {
-                this["Update"] = value;
             }
         }
     }
