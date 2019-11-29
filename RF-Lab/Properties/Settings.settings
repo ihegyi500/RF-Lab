@@ -3,16 +3,16 @@
   <Profiles />
   <Settings>
     <Setting Name="ConnectionString" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Data Source=KUNSHUMS001;Initial Catalog=Kunsziget_IS; Integrated Security=true</Value>
+      <Value Profile="(Default)">Data Source=xxx;Initial Catalog=xxx; Integrated Security=true</Value>
     </Setting>
     <Setting Name="Select" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">SELECT COUNT(RfgunSzériaSzám) FROM RFGUN WHERE Felhasználónév LIKE @user</Value>
+      <Value Profile="(Default)">SELECT COUNT(xxx) FROM xxx WHERE xxx LIKE @user</Value>
     </Setting>
     <Setting Name="InsertInto" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">INSERT INTO RFGUN(Felhasználónév, Jelszó) VALUES(@user, @password)</Value>
+      <Value Profile="(Default)">INSERT INTO xxx(xxx, xxx) VALUES(@user, @password)</Value>
     </Setting>
     <Setting Name="Update" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">UPDATE RFGUN SET Jelszó = @password WHERE Felhasználónév = @user</Value>
+      <Value Profile="(Default)">UPDATE xxx SET xxx = @password WHERE xxx = @user</Value>
     </Setting>
   </Settings>
 </SettingsFile>

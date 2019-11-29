@@ -25,7 +25,7 @@ namespace RFLab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=KUNSHUMS001;Initial Catalog=Kunsziget_IS; Integrated Security=true")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=xxx;Initial Catalog=xxx; Integrated Security=true")]
         public string ConnectionString {
             get {
                 return ((string)(this["ConnectionString"]));
@@ -34,7 +34,7 @@ namespace RFLab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("SELECT COUNT(RfgunSzériaSzám) FROM RFGUN WHERE Felhasználónév LIKE @user")]
+        [global::System.Configuration.DefaultSettingValueAttribute("SELECT COUNT(xxx) FROM xxx WHERE xxx LIKE @user")]
         public string Select {
             get {
                 return ((string)(this["Select"]));
@@ -43,7 +43,7 @@ namespace RFLab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("INSERT INTO RFGUN(Felhasználónév, Jelszó) VALUES(@user, @password)")]
+        [global::System.Configuration.DefaultSettingValueAttribute("INSERT INTO xxx(xxx, xxx) VALUES(@user, @password)")]
         public string InsertInto {
             get {
                 return ((string)(this["InsertInto"]));
@@ -52,7 +52,7 @@ namespace RFLab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("UPDATE RFGUN SET Jelszó = @password WHERE Felhasználónév = @user")]
+        [global::System.Configuration.DefaultSettingValueAttribute("UPDATE xxx SET xxx = @password WHERE xxx = @user")]
         public string Update {
             get {
                 return ((string)(this["Update"]));
